@@ -19,6 +19,7 @@ QuestionGetter::QuestionGetter(QNetworkAccessManager *parent):m_pManager(parent)
 
 bool QuestionGetter::get(QUrl url)
 {
+
     QNetworkRequest request;
 
     request.setUrl( url );
@@ -26,13 +27,14 @@ bool QuestionGetter::get(QUrl url)
     QNetworkReply *reply=m_pManager->get( request );
 
     connect( reply, SIGNAL ( readyRead() ) ,this , SLOT(  GetQuestion())  ) ;
-
+   // connect(reply,  SIGNAL( finished() ), this , SLOT( GetQuestion()) );
     return true;
 }
 
 
 void QuestionGetter::GetQuestion()
 {
+    ClearAnswer();
     QNetworkReply *reply= (QNetworkReply *) sender();
 
     QByteArray array=reply->readAll();
@@ -61,6 +63,7 @@ void QuestionGetter::GetQuestion()
         QJsonValue question_value=data_object.take("question");
         QString q_question=question_value.toString();
         std::string question=q_question.toStdString();
+        question_.set_question(question);
         std::cout<<"question:"<<question<<std::endl;
 
         QJsonValue type_value=data_object.take("type");

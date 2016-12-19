@@ -1,24 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow" >
-  <property name="geometry" >
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>770</width>
+    <height>447</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QMenuBar" name="menuBar" />
-  <widget class="QToolBar" name="mainToolBar" />
-  <widget class="QWidget" name="centralWidget" />
-  <widget class="QStatusBar" name="statusBar" />
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="law">
+       <attribute name="title">
+        <string>Law</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="6" column="1">
+         <widget class="QPushButton" name="buuton_law_next">
+          <property name="text">
+           <string>Next</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QPushButton" name="button_law_prev">
+          <property name="text">
+           <string>Previous</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <widget class="QProgressBar" name="progressBar_law">
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QListView" name="listView_law_answer"/>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QTextBrowser" name="browser_law_question"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="morality">
+       <attribute name="title">
+        <string>Morality</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0" colspan="4">
+         <widget class="QProgressBar" name="progressBar_morallity">
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="4">
+         <widget class="QTextBrowser" name="textBrowser_morality"/>
+        </item>
+        <item row="2" column="0" colspan="4">
+         <widget class="QListView" name="listView_morality"/>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QPushButton" name="button_morality_prev">
+          <property name="text">
+           <string>Prev</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2" colspan="2">
+         <widget class="QPushButton" name="button_morality_next">
+          <property name="text">
+           <string>Next</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="mao">
+       <attribute name="title">
+        <string>Mao</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0" colspan="2">
+         <widget class="QProgressBar" name="progressBar_mao">
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QTextBrowser" name="textBrowser_mao"/>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QListView" name="listView_mao"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="button_mao_prev">
+          <property name="text">
+           <string>Prev</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="button_mao_next">
+          <property name="text">
+           <string>Next</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="marx">
+       <attribute name="title">
+        <string>Marx</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0" colspan="2">
+         <widget class="QProgressBar" name="progressBar_marx">
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QTextBrowser" name="textBrowser_marx"/>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QListView" name="listView_marx"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="button_marx_prev">
+          <property name="text">
+           <string>Prev</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="button_marx_next">
+          <property name="text">
+           <string>Next</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>History</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0" colspan="2">
+         <widget class="QProgressBar" name="progressBar_history">
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QTextBrowser" name="textBrowser_history"/>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QListView" name="listView_history"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="button_history_prev">
+          <property name="text">
+           <string>Prev</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="button_history_next">
+          <property name="text">
+           <string>Next</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>770</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
 </ui>

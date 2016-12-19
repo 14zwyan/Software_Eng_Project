@@ -14,9 +14,8 @@ int main(int argc, char *argv[])
     w.show();
     std::cout<<"haha"<<std::endl;
 
-    QNetworkAccessManager *net_manager=new QNetworkAccessManager();
-    QuestionGetter question_getter(net_manager);
-    question_getter.test();
+
+    //question_getter.test();
 
 //  QNetworkAccessManager *netManager =new QNetworkAccessManager();
 //   //MyNetManager manager(netManager);
